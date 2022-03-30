@@ -68,25 +68,22 @@ public class ExampleUnitTest {
 
         assertEquals(expectedValue, actualValue);
     }
-
     @Test
-    public void getWordsCount_Given_NumberString_Result_Ten() {
+    public void getWordsCount_Given_NumberString_Result_One() {
         String givenString = "0123456789";
         int expectedValue = 1;
         int actualValue = TextUtils.getWordsCount(givenString);
 
         assertEquals(expectedValue, actualValue);
     }
-
     @Test
-    public void getWordsCount_Given_SymbolString_Result_Five() {
+    public void getWordsCount_Given_SymbolString_Result_One() {
         String givenString = "/<->.";
         int expectedValue = 1;
         int actualValue = TextUtils.getWordsCount(givenString);
 
         assertEquals(expectedValue, actualValue);
     }
-
     @Test (expected = NullPointerException.class)
     public void getWordsCount_Given_NullString_Result_Exception() {
         String givenString = null;
